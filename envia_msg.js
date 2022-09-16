@@ -16,7 +16,7 @@ client.on('ready', async () => {
             console.log("enviando");
             numero = array[i];
             console.log('Enviando para : '+numero)
-            envia_msg(array[i])
+            envia_msg('+'+array[i])
             await sleep.sleep(5);        
         }
     });
@@ -47,7 +47,7 @@ function envia_msg(numero){
     '\n'+
     'Fale com um de nossos consultores agora mesmo, teremos o prazer em atendê-lo\n'+
     'https://bit.ly/3QQMOLo';
-    
+
     // Getting chatId from the number.
     // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
     const chatId = number.substring(1) + "@c.us";
